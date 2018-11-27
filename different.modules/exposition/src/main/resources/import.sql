@@ -1,0 +1,5 @@
+--insert into Team (id, name) values(2,'Barcelona');
+------
+--insert into Player (id, team_id, name, num, position) values(1,2,'Lionel Messi', 10, 'Forward');
+--insert into Player (id, team_id, name, num, position) values(2,2,'Andreas Inniesta', 8, 'Midfielder');
+--insert into Player (id, team_id, name, num, position) values(3,2,'Pique', 3, 'Defender');
