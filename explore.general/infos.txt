@@ -1,5 +1,6 @@
 https://www.codementor.io/hantsy/build-a-reactive-application-with-angular-5-and-spring-boot-2-0-fv8uif7wg
 https://github.com/callicoder/jpa-hibernate-tutorials/blob/master/jpa-one-to-many-demo/src/main/java/com/example/jpa/controller/PostController.java
+https://github.com/in28minutes/spring-boot-examples/tree/master/spring-boot-tutorial-basics-configuration
 
 best practice
 https://dev.to/alagrede/why-i-dont-want-use-jpa-anymore-fl
