@@ -11,6 +11,7 @@
 >>>>	https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/main/java/net/petrikainulainen/springdata/jpa/web/TodoController.java
  	https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/test/java/net/petrikainulainen/springdata/jpa/todo/RepositoryTodoServiceTest.java
 	https://www.petrikainulainen.net/programming/testing/writing-clean-tests-small-is-beautiful/
+	https://www.petrikainulainen.net/programming/spring-framework/integration-testing-of-spring-mvc-applications-rest-api-part-two/
  
  3 ->
 	testare completa functionala
