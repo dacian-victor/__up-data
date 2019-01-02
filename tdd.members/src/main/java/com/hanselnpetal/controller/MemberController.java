@@ -2,13 +2,13 @@ package com.hanselnpetal.controller;
 
 import com.hanselnpetal.domain.Board;
 import com.hanselnpetal.domain.Member;
+import com.hanselnpetal.domain.dto.MemberVO;
 import com.hanselnpetal.service.BoardService;
 import com.hanselnpetal.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,7 +33,7 @@ public class MemberController {
             method = RequestMethod.GET,
             value = "/users/boards/{boardid}/members",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Member>> findAllMembers(@PathVariable("boardid") Long boardid) {
+    public ResponseEntity<List<MemberVO>> findAllMembers(@PathVariable("boardid") Long boardid) {
         return ResponseEntity.ok().body(memberService.findAll(boardid));
     }
 

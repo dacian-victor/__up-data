@@ -2,6 +2,7 @@ package com.hanselnpetal.service;
 
 import com.hanselnpetal.data.repos.MemberRepository;
 import com.hanselnpetal.domain.Member;
+import com.hanselnpetal.domain.dto.MemberVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,8 @@ public class MemberService {
 	@Autowired
 	private MemberRepository memberRepository;
 
-	public List<Member> findAll(Long boardId) {
+	public List<MemberVO> findAll(Long boardId) {
+
 		return memberRepository.findByBoardId(boardId);
 	}
 
