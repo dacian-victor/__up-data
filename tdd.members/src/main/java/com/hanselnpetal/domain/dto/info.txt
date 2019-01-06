@@ -1,4 +1,34 @@
 
+intelij - coverage
+	https://www.youtube.com/watch?v=QDFI19lj4OM
+-------------------------
+    public String updateUser(Long userId, UserDTO userDto) throws Exception {
+        //TODO: not implemented
+        throw new NotImplementedException();
+    }
+
+    public String deleteUser(Long userId) throws Exception {
+        //TODO: not implemented
+        throw new NotImplementedException();
+    }
+	
+-------------------------	
+builder - validation
+https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/main/java/net/petrikainulainen/springdata/jpa/todo/Todo.java
+
+-------------------------	
+query - optimization
+https://github.com/Cepr0/spring-data-rest-dto/blob/master/src/main/java/io/github/cepr0/springdto/repo/CategoryRepo.java
+    @RestResource(exported = false)
+    @Query("select c as category, count(p) as quantity from Category c join c.products p group by c")
+    List<CategoryProjection> getDtos();
+
+-------------------------	
+string json response - conversion	
+https://github.com/lankydan/spring-boot-dto-test-tutorial/blob/master/src/main/java/lankydan/tutorial/springboot/PersonRestController.java	
+
+---------------------------------------
+
 	(Strategy 1): Try always to write Unit Tests for your logic without focusing on any other behavior. Use MockMVC in Standalone mode.
 	(Strategy 4): SpringBootTest with a web server on a random port. However, manage it as a separate Integration Test
 
@@ -11,7 +41,6 @@
 >>>>	https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/main/java/net/petrikainulainen/springdata/jpa/web/TodoController.java
  	https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/test/java/net/petrikainulainen/springdata/jpa/todo/RepositoryTodoServiceTest.java
 	https://www.petrikainulainen.net/programming/testing/writing-clean-tests-small-is-beautiful/
-	https://www.petrikainulainen.net/programming/spring-framework/integration-testing-of-spring-mvc-applications-rest-api-part-two/
  
  3 ->
 	testare completa functionala
