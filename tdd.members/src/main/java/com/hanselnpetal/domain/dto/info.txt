@@ -1,0 +1,82 @@
+
+intelij - coverage
+	https://www.youtube.com/watch?v=QDFI19lj4OM
+-------------------------
+    public String updateUser(Long userId, UserDTO userDto) throws Exception {
+        //TODO: not implemented
+        throw new NotImplementedException();
+    }
+
+    public String deleteUser(Long userId) throws Exception {
+        //TODO: not implemented
+        throw new NotImplementedException();
+    }
+	
+-------------------------	
+builder - validation
+https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/main/java/net/petrikainulainen/springdata/jpa/todo/Todo.java
+
+-------------------------	
+query - optimization
+https://github.com/Cepr0/spring-data-rest-dto/blob/master/src/main/java/io/github/cepr0/springdto/repo/CategoryRepo.java
+    @RestResource(exported = false)
+    @Query("select c as category, count(p) as quantity from Category c join c.products p group by c")
+    List<CategoryProjection> getDtos();
+
+-------------------------	
+string json response - conversion	
+https://github.com/lankydan/spring-boot-dto-test-tutorial/blob/master/src/main/java/lankydan/tutorial/springboot/PersonRestController.java	
+
+---------------------------------------
+
+	(Strategy 1): Try always to write Unit Tests for your logic without focusing on any other behavior. Use MockMVC in Standalone mode.
+	(Strategy 4): SpringBootTest with a web server on a random port. However, manage it as a separate Integration Test
+
+ 1 -> 
+	decid ce teste trebuie facute!!!
+	https://thepracticaldeveloper.com/2017/07/31/guide-spring-boot-controller-tests/
+	
+ 2 -> 
+	rezum testare prin dto (basic testing)
+>>>>	https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/main/java/net/petrikainulainen/springdata/jpa/web/TodoController.java
+ 	https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/test/java/net/petrikainulainen/springdata/jpa/todo/RepositoryTodoServiceTest.java
+	https://www.petrikainulainen.net/programming/testing/writing-clean-tests-small-is-beautiful/
+ 
+ 3 ->
+	testare completa functionala
+	http://www.bytestree.com/spring/restful-web-services-integration-testing-spring-boot/
+	https://github.com/bytestree/spring-restful-service-unit-test/blob/master/src/main/java/com/bytestree/restful/controller/EmployeeController.java
+
+
+[entities] https://vladmihalcea.com/the-best-way-to-use-entity-inheritance-with-jpa-and-hibernate/
+[log] ENDPONT -EXAMPLE STANDATRD - with LOG
+https://github.com/bytestree/spring-restful-service-unit-test/blob/master/src/main/java/com/bytestree/restful/controller/EmployeeController.java
+http://www.bytestree.com/spring/restful-web-services-unit-testing-spring-boot/
+[caching] example
+https://github.com/mbhave/tdd-with-spring-boot/blob/master/non-reactive/src/test/java/com/example/car/CachingTest.java
+[dto] example
+https://github.com/pkainulainen/spring-mvc-test-examples/blob/master/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java
+[transactional]
+https://stackoverflow.com/questions/10394857/how-to-use-transactional-with-spring-data
+[json] constructor
+https://dzone.com/articles/jackson-annotations-for-json-part-2-serialization
+[mapping dto/entities]
+https://auth0.com/blog/automatically-mapping-dto-to-entity-on-spring-boot-apis/
+[swagger customization]
+https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+[versioning]
+https://dzone.com/articles/versioning-rest-api-with-spring-boot-and-swagger
+
+
+@Column @CreationTimestamp
+private LocalDateTime createDateTime;
+
+@Column @UpdateTimestamp
+private LocalDateTime updateDateTime;
+
+@Value
+public class WeatherReportDTO {
+    private double temperature;
+    private TemperatureUnit unit;
+    private int humidity;
+}
